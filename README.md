@@ -15,7 +15,7 @@ This repo is organized to help me track progress on different data structures an
 
 ### 1. Data Structures
 - [ ] **Linked Lists:**
-    - [x] Singly lists
+    - [x] Singly lists( C & python)
     - [ ] doubly lists
 - [ ] **Stacks & Queues:** Implementation and applications.
 - [ ] **Trees:**
