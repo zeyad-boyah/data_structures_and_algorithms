@@ -1,9 +1,5 @@
 '''
-
-insertAtEnd(): Inserts a node at the end of the linked list.
-remove_node(): Deletes a node by taking data as an argument. It traverses the linked list and deletes the node if a match is found.
-sizeOfLL(): Returns the current size of the linked list.
-printLL(): Traverses the linked list and prints the data of each node. printLL() method ensures the last node is printed by adding a print(current_node.data) after the loop ends. This handles the edge case of printing the last node.
+printLL(): 
 '''
 
 
@@ -57,35 +53,61 @@ class LinkedList():
             current_node = current_node.next
             linked_list_index += 1
 
+    # insert a node at the end
+    def insert_at_end(self, data):
+        if self.head == None:
+            self.add_to_head(data)
+            print("new node inserted")
+            return
+        current_node = self.head
+        while current_node:
+            if current_node.next == None:
+                new_node = Node(data)
+                current_node.next = new_node
+                return
+            current_node = current_node.next
+        
+
+    # Deletes a node by taking data as an argument. It traverses the linked list and deletes the node if a match is found.
+    def remove_node(self, data):
+        if self.head == None:
+            print("can't delete the required node because the LL is already empty")
+            return
+        
+        current_node = self.head
+        if current_node.data== data:
+            self.head = current_node.next
+
+        while current_node.next:
+            node_after = current_node.next
+            if node_after.data == data:
+                current_node.next = node_after.next
+                print("node deleted")
+                return
+            current_node = current_node.next
+
+    #  Returns the current size of the linked list.
+    def size_of_LL(self):
+        size = 0
+        current_node = self.head
+        while current_node:
+            size += 1
+            current_node = current_node.next
+        return size
+
+    # Traverses the linked list and prints the data of each node.
     def print_list(self):
         current = self.head
         while current:
             print(current.data, end=" -> ")
             current = current.next
         print("None")
-
-
-
-# tests
-if __name__ == "__main__":
-    ll = LinkedList()
-
-    # Test inserting into an empty list at index 0
-    ll.insert_at_index(10, 0)  # Expected list: 10
-
-    # Insert at tail (index 1 in a list with 1 element)
-    ll.insert_at_index(20, 1)  # Expected list: 10 -> 20
-
-    # Insert in the middle (index 1)
-    ll.insert_at_index(15, 1)  # Expected list: 10 -> 15 -> 20
-
-    # Insert at head again
-    ll.insert_at_index(5, 0)   # Expected list: 5 -> 10 -> 15 -> 20
-
-    # Attempt to insert at an index that's out-of-bound
-    ll.insert_at_index(25, 10) # Expected output: "Index not present"
-
-    # Print final list
-    ll.print_list()           # Expected output: 5 -> 10 -> 15 -> 20 -> None
-
     
+    def to_list(self):
+        """Helper method to convert the linked list into a Python list mainly for the unit test."""
+        result = []
+        current = self.head
+        while current:
+            result.append(current.data)
+            current = current.next
+        return result
