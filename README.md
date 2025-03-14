@@ -14,8 +14,9 @@ This repo is organized to help me track progress on different data structures an
 ## TODO List
 
 ### 1. Data Structures
-- [ ] **Arrays & Strings:** Fundamental operations and manipulations.
-- [ ] **Linked Lists:** Singly and doubly linked lists.
+- [ ] **Linked Lists:**
+    - [x] Singly lists
+    - [ ] doubly lists
 - [ ] **Stacks & Queues:** Implementation and applications.
 - [ ] **Trees:**
   - [ ] Binary Trees
