@@ -17,7 +17,7 @@ This repo is organized to help me track progress on different data structures an
 - [ ] **Linked Lists:**
     - [x] Singly lists( C & python)
     - [ ] doubly lists
-- [ ] **Hash Tables:** Collision handling and optimization.
+- [x] **Hash Tables:** Collision handling and optimization. ( C & python)
 - [ ] **Stacks & Queues:** Implementation and applications.
 - [ ] **Trees:**
   - [ ] Binary Trees
