@@ -115,6 +115,22 @@ void display(HashMap* map) {
     }
 }
 
+// Free all memory allocated for the hash map
+void freeHashMap(HashMap* map) {
+    // Free all nodes in the array (except the dummy, which is freed later)
+    for (int i = 0; i < map->capacity; i++) {
+        if (map->arr[i] != NULL && map->arr[i] != map->dummy) {
+            free(map->arr[i]);
+        }
+    }
+    // Free the dummy node
+    free(map->dummy);
+    // Free the array of pointers
+    free(map->arr);
+    // Finally, free the HashMap structure itself
+    free(map);
+}
+
 // Main function to test the hash map implementation
 int main() {
     HashMap* h = createHashMap();
@@ -139,8 +155,8 @@ int main() {
     // Try to get the value for key 2 after deletion
     printf("Get key 2: %d\n", get(h, 2));
 
-    // Free allocated memory (omitted for brevity but important in production code)
-    // Ideally, you should free all nodes and the map itself.
+    // Free allocated memory 
+    freeHashMap(h);
     
     return 0;
 }
