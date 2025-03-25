@@ -17,6 +17,7 @@ This repo is organized to help me track progress on different data structures an
 - [ ] **Linked Lists:**
     - [x] Singly lists( C & python)
     - [ ] doubly lists
+- [ ] **Hash Tables:** Collision handling and optimization.
 - [ ] **Stacks & Queues:** Implementation and applications.
 - [ ] **Trees:**
   - [ ] Binary Trees
@@ -26,7 +27,6 @@ This repo is organized to help me track progress on different data structures an
   - [ ] Representations (adjacency list, matrix)
   - [ ] Traversals (DFS, BFS)
 - [ ] **Heaps & Priority Queues:** Building and using heaps.
-- [ ] **Hash Tables:** Collision handling and optimization.
 - [ ] **Tries:** Basic implementation and use-cases.
 
 ### 2. Algorithms

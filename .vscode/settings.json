@@ -3,6 +3,7 @@
         "*.sqlbook": "sql",
         "*.ndjson": "jsonl",
         "*.dbclient-js": "javascript",
-        "linked_list.h": "c"
+        "linked_list.h": "c",
+        "stdlib.h": "c"
     }
 }
